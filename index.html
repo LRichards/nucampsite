@@ -20,7 +20,7 @@
 </head>
 
 <body>
-
+    <!--  Jumbotron  -->
     <header class="jumbotron jumbotron-fluid">
         <div class="container">
             <div class="row">
@@ -31,10 +31,13 @@
                     <h1>NuCamp</h1>
                     <h2>a better way to camp</h2>
                 </div>
+                <div class="col col-md-4 col-xl-2 mt-4">
+                    <a type="button" class="btn btn-info btn-lg text-nowrap" href="#reserveForm">Reserve Campsite</a>
+                </div>
             </div>
         </div>
     </header>
-
+    <!--  Navigation Bar  -->
     <nav class="navbar navbar-expand-sm navbar-dark sticky-top">
         <div class="container">
             <a class="navbar-brand" href="#"><img src="img/logo.png" height="30" width="30" /></a>
@@ -51,7 +54,7 @@
             </div>
         </div>
     </nav>
-    
+        <!--  Discover and Review - Our Campsites  -->
     <div class="container">
         <div class="row row-content">
             <div class="col-sm-4 order-sm-last col-md-3">
@@ -67,17 +70,22 @@
                 </div>
             </div>      
         </div>
-
+    <!--  Featured Campsites - React Lake Campground  -->
         <div class="row row-content">
             <div class="col-sm-4 col-md-3">
                 <h2>Featured Campsites</h2>
             </div>
             <div class="col">
-                <h3>React Lake Campground</h3>
-                <p class="d-none d-sm-block">Nestled in the foothills of the Chrome Mountains, this campground on the shores of the pristine React Lake is a favorite for fly fishers.</p>
+                <div class="media">
+                    <img class="d-flex ml-3 img-thumbnail order-sm-last" src="img/react-lake-thumb.jpg" alt="React Lake Thumbnail" />
+                    <div class="media-body align-self-center">
+                        <h3>React Lake Campground</h3>
+                        <p class="d-none d-sm-block">Nestled in the foothills of the Chrome Mountains, this campground on the shores of the pristine React Lake is a favorite for fly fishers.</p>
+                    </div>
+                </div>
             </div>
         </div>
-
+    <!--  Our Community Partners - Bootstrap Outfitters  -->
         <div class="row row-content">
             <div class="col-sm-4 order-sm-last col-md-3">
                 <h2>Our Community Partners</h2>
@@ -92,8 +100,45 @@
                 </div>
             </div>
         </div>
+        <!-- Reserve a Campsite Form in a Card -->
+        <div class="row row-content">
+            <div class="col-sm-6 mx-auto">
+                <div class="card">
+                    <h3 class="card-header bg-info text-white">Reserve a Campsite</h3>
+                    <div class="card-body">
+                        <form id="reserveForm">
+                            <div class="form-group row">
+                                <label class="col-sm-6 col-form-label" for="numCampers">Number of Campers</label>
+                                <div class="col-sm">
+                                    <select name="numCampers" id="numCampers" class="form-control">
+                                        <option>Select</option>
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5</option>
+                                        <option>6</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row form-group"> 
+                                <label class="col-sm-6 col-form-label" for="date">Date</label>
+                                <div class="col-sm-6">
+                                    <input type="date" id="date" name="date" placeholder="" class="form-control">
+                                </div>
+                            </div>
+                            <div class="row form-group">
+                                <div class="col">
+                                    <button type="submit" class="btn btn-primary">Search</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-
+    <!--  Footer - Site links - Social links - contact info  -->
     <footer class="site-footer">
         <div class="container">
             <div class="row">
